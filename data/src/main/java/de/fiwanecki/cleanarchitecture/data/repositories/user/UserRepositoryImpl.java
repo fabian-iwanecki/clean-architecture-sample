@@ -9,6 +9,10 @@ public class UserRepositoryImpl extends BaseRepositoryImpl<UserEntity> implement
 
     private UserDataProvider userDataProvider;
 
+    public UserRepositoryImpl(UserDataProvider userDataProvider) {
+        this.userDataProvider = userDataProvider;
+    }
+
     public UserEntity getUser(String uuid) {
         return userDataProvider.getUser(uuid);
     }
